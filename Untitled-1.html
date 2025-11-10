@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Forms Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: 2rem auto;
+      background-color: #e9e6e8ee;
+      padding: 1rem;
+    }
+    form {
+      background: rgb(216, 211, 211);
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.4rem;
+      margin-top: 0.3rem;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .options-group label {
+      font-weight: normal;
+      margin-right: 1rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      background-color: #007BFF;
+      color: rgb(9, 9, 9);
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Contact Form</h2>
+  <form action="#" method="post">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="fullname" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required />
+
+    <label>Gender:</label>
+    <div class="options-group">
+      <label><input type="radio" name="gender" value="male" /> Male</label>
+      <label><input type="radio" name="gender" value="female" /> Female</label>
+      <label><input type="radio" name="gender" value="other" /> Other</label>
+    </div>
+
+    <label>Interests:</label>
+    <div class="options-group">
+      <label><input type="checkbox" name="interests" value="reading" /> Reading</label>
+      <label><input type="checkbox" name="interests" value="sports" /> Sports</label>
+      <label><input type="checkbox" name="interests" value="music" /> Music</label>
+    </div>
+
+    <label for="country">Country:</label>
+    <select id="country" name="country" required>
+      <option value="">Select your country</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+      <option value="india">India</option>
+      <option value="australia">Australia</option>
+         <option value="text">others</option>
+    </select>
+     <tr>
+            <td>Department:</td>
+            <td>
+            
+                <select>
+                    <option>CSE</option>
+                    <option>ECE</option>
+                    <option>EEE</option>
+                    <option>AIML</option>
+                    <option>DS</option>
+                    <option>MECH</option>   
+                    <option>CIVIL</option>
+                    <option>IOT</option>
+                </select>
+            </td>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Enter your message here..."></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
